@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BottomCategoryCollectionViewCell" id="gTV-IL-0wX" customClass="BottomCategoryCollectionViewCell" customModule="NewsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="323" height="151"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="323" height="151"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bnm-Sb-5iL">
+                        <rect key="frame" x="0.0" y="0.0" width="323" height="151"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 things to know about the 'conundrum' of Iupus" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmB-X4-1EQ">
+                                <rect key="frame" x="20" y="12" width="265" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="iOB-H3-Chr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matt Villano" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Td2-Yy-9G5">
+                                <rect key="frame" x="20" y="129" width="62.5" height="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunday, 9 May 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbV-1U-Wg2">
+                                <rect key="frame" x="209.5" y="129" width="105.5" height="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <constraints>
+                            <constraint firstItem="Td2-Yy-9G5" firstAttribute="leading" secondItem="Bnm-Sb-5iL" secondAttribute="leading" constant="20" symbolic="YES" id="3bI-yN-t1p"/>
+                            <constraint firstItem="fmB-X4-1EQ" firstAttribute="width" secondItem="Bnm-Sb-5iL" secondAttribute="width" multiplier="0.851393" constant="-10" id="KZy-To-Q7p"/>
+                            <constraint firstAttribute="trailing" secondItem="RbV-1U-Wg2" secondAttribute="trailing" constant="8" id="NCw-vf-Qdb"/>
+                            <constraint firstItem="fmB-X4-1EQ" firstAttribute="leading" secondItem="Bnm-Sb-5iL" secondAttribute="leading" constant="20" id="Xja-oC-3Xm"/>
+                            <constraint firstAttribute="bottom" secondItem="Td2-Yy-9G5" secondAttribute="bottom" constant="8" id="YCn-o5-KfB"/>
+                            <constraint firstAttribute="bottom" secondItem="RbV-1U-Wg2" secondAttribute="bottom" constant="8" id="hjE-o3-q8h"/>
+                            <constraint firstItem="fmB-X4-1EQ" firstAttribute="top" secondItem="Bnm-Sb-5iL" secondAttribute="top" constant="12" id="pyA-N7-zdD"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Bnm-Sb-5iL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="7bt-lK-u5k"/>
+                <constraint firstItem="Bnm-Sb-5iL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="B9I-N8-aN4"/>
+                <constraint firstAttribute="trailing" secondItem="Bnm-Sb-5iL" secondAttribute="trailing" id="Smz-Wa-9ek"/>
+                <constraint firstAttribute="bottom" secondItem="Bnm-Sb-5iL" secondAttribute="bottom" id="l07-bj-OFr"/>
+            </constraints>
+            <size key="customSize" width="323" height="151"/>
+            <connections>
+                <outlet property="cardView" destination="Bnm-Sb-5iL" id="i8H-ww-mht"/>
+                <outlet property="lb_date" destination="RbV-1U-Wg2" id="Wkc-hl-ykt"/>
+                <outlet property="lb_name" destination="Td2-Yy-9G5" id="xjF-PZ-nq7"/>
+                <outlet property="lb_topic" destination="fmB-X4-1EQ" id="h4N-qs-aXG"/>
+            </connections>
+            <point key="canvasLocation" x="335.50724637681162" y="178.45982142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LatestNewsCollectionViewCell" id="gTV-IL-0wX" customClass="LatestNewsCollectionViewCell" customModule="NewsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="318" height="178"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="318" height="178"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mh0-DG-7gE">
+                        <rect key="frame" x="0.0" y="0.0" width="318" height="178"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crypto investors should be prepared to lose all their money, BOE governor says" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2j-ay-2Ql">
+                                <rect key="frame" x="15" y="49" width="293" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="96C-mh-sM6"/>
+                                    <constraint firstAttribute="width" secondItem="M2j-ay-2Ql" secondAttribute="height" multiplier="293:80" id="N6f-Xb-sPo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;i'm going to say this very bluntly again,&quot; he added. &quot;Buy them only if you're prepared to lose all your money.&quot;" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cej-AO-jX1">
+                                <rect key="frame" x="15" y="133" width="295" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Cej-AO-jX1" secondAttribute="height" multiplier="59:7" id="QCD-0c-b2q"/>
+                                    <constraint firstAttribute="height" constant="35" id="gtv-63-j2T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Ryan Browne" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdZ-h0-Nzh">
+                                <rect key="frame" x="15" y="34.5" width="293" height="13.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Cej-AO-jX1" secondAttribute="trailing" constant="8" id="1Nd-sH-NvB"/>
+                            <constraint firstAttribute="bottom" secondItem="Cej-AO-jX1" secondAttribute="bottom" constant="10" id="69J-NW-xkI"/>
+                            <constraint firstItem="WdZ-h0-Nzh" firstAttribute="leading" secondItem="mh0-DG-7gE" secondAttribute="leading" constant="15" id="Rqc-8O-uKb"/>
+                            <constraint firstItem="M2j-ay-2Ql" firstAttribute="top" secondItem="WdZ-h0-Nzh" secondAttribute="bottom" constant="1" id="Una-u2-bSR"/>
+                            <constraint firstItem="Cej-AO-jX1" firstAttribute="leading" secondItem="M2j-ay-2Ql" secondAttribute="leading" id="a94-kW-vCp"/>
+                            <constraint firstItem="M2j-ay-2Ql" firstAttribute="centerY" secondItem="mh0-DG-7gE" secondAttribute="centerY" id="d55-w3-fHm"/>
+                            <constraint firstItem="M2j-ay-2Ql" firstAttribute="leading" secondItem="WdZ-h0-Nzh" secondAttribute="leading" id="qrp-LM-Bgc"/>
+                            <constraint firstItem="WdZ-h0-Nzh" firstAttribute="trailing" secondItem="M2j-ay-2Ql" secondAttribute="trailing" id="sxR-D4-oKr"/>
+                            <constraint firstAttribute="trailing" secondItem="M2j-ay-2Ql" secondAttribute="trailing" constant="10" id="z0L-6r-KIX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="mh0-DG-7gE" secondAttribute="trailing" id="Ox8-EH-rW7"/>
+                <constraint firstItem="mh0-DG-7gE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ec7-gC-VO9"/>
+                <constraint firstAttribute="bottom" secondItem="mh0-DG-7gE" secondAttribute="bottom" id="obx-2T-Ffs"/>
+                <constraint firstItem="mh0-DG-7gE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="s5Y-gy-G7t"/>
+            </constraints>
+            <size key="customSize" width="318" height="178"/>
+            <connections>
+                <outlet property="lb_author" destination="WdZ-h0-Nzh" id="b17-qV-Smj"/>
+                <outlet property="lb_description" destination="Cej-AO-jX1" id="I57-JV-XKE"/>
+                <outlet property="lb_title" destination="M2j-ay-2Ql" id="zlQ-Es-5zP"/>
+                <outlet property="view_image" destination="mh0-DG-7gE" id="zq8-To-c0v"/>
+            </connections>
+            <point key="canvasLocation" x="274.55357142857139" y="218.84057971014494"/>
+        </collectionViewCell>
+    </objects>
+</document>
