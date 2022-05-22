@@ -44,19 +44,18 @@ class SearchViewController: UIViewController, UIGestureRecognizerDelegate, UISea
         
         collection_result?.contentInsetAdjustmentBehavior = .always
         collection_result.register(UINib(nibName: "BottomCategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BottomCategoryCollectionViewCell")
+        collection_result.isPrefetchingEnabled = true
         
         //Network Request
         httpService = HTTPService(baseUrl: "https://newsapi.org")
         httpService.getSearchNews()
         httpService.searchAPIDelegate = self
         
+        setUpSearchBar()
+        
         self.collection_category.selectItem(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: [])
     }
     
-    
-    override func viewDidLayoutSubviews() {
-        setUpSearchBar()
-    }
 
     /*
     // MARK: - Navigation

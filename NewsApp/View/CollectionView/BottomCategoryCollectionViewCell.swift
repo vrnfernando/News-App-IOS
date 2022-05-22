@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class BottomCategoryCollectionViewCell: UICollectionViewCell {
     
@@ -41,16 +42,15 @@ class BottomCategoryCollectionViewCell: UICollectionViewCell {
     }
     
     func loadFrom(URLAddress: String) {
-        guard let url = URL(string: URLAddress) else {
-            return
-        }
         
-        DispatchQueue.main.async { [weak self] in
-            if let imageData = try? Data(contentsOf: url) {
-                if let loadedImage = UIImage(data: imageData) {
-                    self!.populateCell(loadedImage)
+        SDWebImageManager.shared().loadImage(with: NSURL.init(string: URLAddress) as URL?, options: .continueInBackground, progress: { (recieved, expected, nil) in
+            print(recieved,expected)
+        }, completed: { (downloadedImage, data, error, SDImageCacheType, true, imageUrlString) in
+            DispatchQueue.main.async {
+                if downloadedImage != nil{
+                    self.populateCell(downloadedImage!)
                 }
             }
-        }
+        })
     }
 }

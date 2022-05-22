@@ -8,6 +8,7 @@ target 'NewsApp' do
   pod 'Alamofire'
   pod 'AlamofireImage'
   pod 'AlamofireObjectMapper', '~> 5.0'
+  pod 'SDWebImage', '~> 4.0'
   # Pods for NewsApp
 
   target 'NewsAppTests' do

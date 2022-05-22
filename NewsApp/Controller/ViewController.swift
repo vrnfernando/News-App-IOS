@@ -42,6 +42,7 @@ class ViewController: UIViewController {
         collectionView_latestNews?.contentInsetAdjustmentBehavior = .always
         collectionView_latestNews.register(UINib(nibName: "LatestNewsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LatestNewsCollectionViewCell")
         collectionView_latestNews.isPagingEnabled = true
+        collectionView_latestNews.isPrefetchingEnabled = true
         
         collectionView_category?.contentInsetAdjustmentBehavior = .always
         collectionView_category.register(UINib(nibName: "CategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CategoryCollectionViewCell")
@@ -49,6 +50,7 @@ class ViewController: UIViewController {
         
         collectionView_bottomCategory?.contentInsetAdjustmentBehavior = .always
         collectionView_bottomCategory.register(UINib(nibName: "BottomCategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BottomCategoryCollectionViewCell")
+        collectionView_bottomCategory.isPrefetchingEnabled = true
         
         //Network Request
         httpService = HTTPService(baseUrl: "https://newsapi.org")
