@@ -75,10 +75,18 @@ class ViewController: UIViewController {
         
         view_bottomNavigation.layer.cornerRadius = 25
     }
+    
+    // Move to detail View
+    func moveToDescriptionView(artical: Article){
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        nextViewController.artical = artical
+        self.navigationController?.pushViewController(nextViewController, animated:false)
+        
+    }
 
 }
-
-
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -141,9 +149,15 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if collectionView == collectionView_category {
+        if collectionView == collectionView_latestNews {
             
+            moveToDescriptionView(artical: articalArray[indexPath.row])
             
+        }else if collectionView == collectionView_bottomCategory {
+            
+            moveToDescriptionView(artical: allArticalNewsArray[indexPath.row])
+            
+        }else if collectionView == collectionView_category {
         }
         
     }
@@ -152,8 +166,6 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
         
         
         if collectionView == collectionView_category {
-            
-            
         }
         
     }

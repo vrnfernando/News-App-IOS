@@ -52,9 +52,6 @@ class HTTPService: NSObject {
         
         let urlString   = "\(self.baseUrl!)\(contextPath)\(self.APIKey!)" as URLConvertible
         
-        print("urlString: ",urlString)
-        print(self.headers)
-        print(self.parameters)
         Alamofire.request(urlString, method: .get, parameters: self.parameters!, headers: self.headers).responseJSON { (response) in
             
             var httpResponse: HTTPResponse! = nil
@@ -94,7 +91,7 @@ class HTTPService: NSObject {
 
 
 extension HTTPService: LatestNewsProtocol {
-
+    
     func getAllNews() {
         
         let contextPath = "/v2/everything?q=bitcoin&apiKey="
@@ -121,7 +118,7 @@ extension HTTPService: LatestNewsProtocol {
                     }
                     
                     self.dashBoardDelegate?.getAllNews(res: articles)
-//                    return
+                    //                    return
                 } else {
                     let exception               = RestClientError.jsonParseError(errorCode: "0", errorMessage: "Error")
                     self.dashBoardDelegate?.getAllNews(exception)
@@ -161,7 +158,7 @@ extension HTTPService: LatestNewsProtocol {
                     }
                     
                     self.dashBoardDelegate?.getLatestNews(res: articles)
-//                    return
+                    //                    return
                 } else {
                     let exception               = RestClientError.jsonParseError(errorCode: "0", errorMessage: "Error")
                     self.dashBoardDelegate?.getLatestNews(exception)
@@ -172,9 +169,6 @@ extension HTTPService: LatestNewsProtocol {
             print("handle default error here: getModesDetails")
             return
         }
-        
-        
-        
     }
 }
 

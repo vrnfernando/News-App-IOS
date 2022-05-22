@@ -29,9 +29,7 @@ class SearchViewController: UIViewController, UIGestureRecognizerDelegate, UISea
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
-        
-   
-        
+
     }
 
     override func viewDidLoad() {
@@ -78,6 +76,7 @@ class SearchViewController: UIViewController, UIGestureRecognizerDelegate, UISea
         
     }
     
+    //filter data
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         guard !searchText.isEmpty else {
             currentArticalArray = allArticals
@@ -92,6 +91,16 @@ class SearchViewController: UIViewController, UIGestureRecognizerDelegate, UISea
     
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
         print("")
+    }
+    
+    // Move to detail View
+    func moveToDescriptionView(artical: Article){
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        nextViewController.artical = artical
+        self.navigationController?.pushViewController(nextViewController, animated:false)
+        
     }
 
 }
@@ -145,8 +154,9 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         if collectionView == collection_category {
+        }else{
+            moveToDescriptionView(artical: currentArticalArray[indexPath.row])
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {

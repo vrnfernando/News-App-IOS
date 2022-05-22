@@ -22,7 +22,6 @@ class Source: NSObject, Mappable {
     required internal init?(map: Map){ }
     
     internal func mapping(map: Map) {
-        
         id          <- map["id"]
         name        <- map["name"]
     }
