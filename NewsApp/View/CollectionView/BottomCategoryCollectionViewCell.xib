@@ -21,9 +21,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="323" height="151"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 things to know about the 'conundrum' of Iupus" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmB-X4-1EQ">
-                                <rect key="frame" x="20" y="12" width="265" height="50"/>
+                                <rect key="frame" x="20" y="12" width="286" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="iOB-H3-Chr"/>
+                                    <constraint firstAttribute="width" secondItem="fmB-X4-1EQ" secondAttribute="height" multiplier="143:25" id="pjy-z5-AS6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -45,7 +46,6 @@
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
                             <constraint firstItem="Td2-Yy-9G5" firstAttribute="leading" secondItem="Bnm-Sb-5iL" secondAttribute="leading" constant="20" symbolic="YES" id="3bI-yN-t1p"/>
-                            <constraint firstItem="fmB-X4-1EQ" firstAttribute="width" secondItem="Bnm-Sb-5iL" secondAttribute="width" multiplier="0.851393" constant="-10" id="KZy-To-Q7p"/>
                             <constraint firstAttribute="trailing" secondItem="RbV-1U-Wg2" secondAttribute="trailing" constant="8" id="NCw-vf-Qdb"/>
                             <constraint firstItem="fmB-X4-1EQ" firstAttribute="leading" secondItem="Bnm-Sb-5iL" secondAttribute="leading" constant="20" id="Xja-oC-3Xm"/>
                             <constraint firstAttribute="bottom" secondItem="Td2-Yy-9G5" secondAttribute="bottom" constant="8" id="YCn-o5-KfB"/>

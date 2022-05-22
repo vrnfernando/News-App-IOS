@@ -44,4 +44,30 @@ enum UserDefaultsKeys : String {
     case userID
 }
 
+// Set Custom Search Field
+func SearchText(to searchBar: UISearchBar, placeHolderText: String) {
+    searchBar.barTintColor = UIColor.clear
+    searchBar.backgroundColor = UIColor.clear
+    searchBar.isTranslucent = true
+    searchBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+    
+    let searchTextField:UITextField = searchBar.value(forKey: "searchField") as? UITextField ?? UITextField()
+    searchTextField.layer.cornerRadius = 18
+    searchTextField.layer.borderWidth = 0.2
+    searchTextField.layer.borderColor = UIColor.lightGray.cgColor
+    searchTextField.textAlignment = NSTextAlignment.left
+  
+    searchTextField.leftView = nil
+    searchTextField.font = UIFont.systemFont(ofSize: 12.0)
+    searchTextField.attributedPlaceholder = NSAttributedString(string: placeHolderText,attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+    
+    let image:UIImage = UIImage(named: "ic_search")!
+    let imageView:UIImageView = UIImageView.init(image: image)
+    searchTextField.rightView = imageView
+    searchTextField.backgroundColor = UIColor.white
+    searchTextField.rightViewMode = UITextField.ViewMode.always
+}
+
+
+
 
